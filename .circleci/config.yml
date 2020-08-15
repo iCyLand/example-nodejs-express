@@ -2,7 +2,10 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 # // only npm install
-version: 2
+version: 2.1
+orbs:
+  sonarqube: clicklogiq/sonarqube@0.0.2
+
 jobs:
   build:
     docker:
