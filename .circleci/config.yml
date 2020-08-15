@@ -16,6 +16,12 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - sonarqube:
+          code-analysis:
+            parameters:
+              - organization: ice-limited
+              - host_url: https://sonar.ice.limited
+              - projectKey: node-express
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
